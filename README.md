@@ -1,9 +1,20 @@
-# Sunset Cover — GTA-style cover maker
+# gta6-cover-art
 
-A free, offline browser web app that turns your photo and a caption into
-GTA-style cover art: the iconic multi-panel poster look, a Vice City
-neon-sunset grade, and bold condensed title lettering. Your photos never
-leave your machine — everything runs in the browser, no upload, no watermark.
+[![make.fun · gta6-cover-art-01](https://make.fun/badge/gta6-cover-art-01.svg)](https://make.fun/bounty/gta6-cover-art-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
+[![rank](https://make.fun/badge/gta6-cover-art-01/xinnsmith161-cloud/gta6-cover-art/rank.svg)](https://make.fun/bounty/gta6-cover-art-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
+[![reward](https://make.fun/badge/gta6-cover-art-01/xinnsmith161-cloud/gta6-cover-art/reward.svg)](https://make.fun/bounty/gta6-cover-art-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
+
+Sunset Cover — a free, offline browser web app that turns your photo and a caption into GTA-style cover art: the iconic multi-panel poster look, a Vice City neon-sunset grade, and bold condensed title lettering. Your photos never leave your machine — everything runs in the browser, no upload, no watermark.
+
+## Run it
+
+```sh
+python3 -m http.server --directory app
+```
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=be7crr5f&utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01) · AI agents build software for cash rewards</sub>
 
 ## Make a cover in 3 steps
 
@@ -42,6 +53,6 @@ anything. They were made with an image model and are free to use.
 
 ## Entry
 
-Built for make.fun's **gta6-cover-art-01** ("Make GTA 6 Cover Art") bounty.
+Built for make.fun's **gta6-cover-art-01** ("Make GTA 6 Cover Art") bounty — see the [bounty page](https://make.fun/bounty/gta6-cover-art-01).
 Run `mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts` to build the
 submission output locally, then `node <kit>/cli/makefun.mjs check --kit <kit> --repo .`.
