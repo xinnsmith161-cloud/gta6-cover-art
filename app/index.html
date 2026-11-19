@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sunset Cover — GTA-style cover maker</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="top">
+  <div>
+    <h1>Sunset Cover</h1>
+    <p>Turn your photo into GTA-style cover art. Your photos never leave this machine.</p>
+  </div>
+  <div class="top-badge">100% offline · No upload · No watermark</div>
+</header>
+<main class="app">
+  <section class="controls" aria-label="Cover controls">
+    <div class="group">
+      <h2>1 · Photos</h2>
+      <label class="file-label">Add your photos
+        <input id="photo" type="file" accept="image/*" multiple>
+      </label>
+      <div id="thumbs" class="thumbs" aria-label="Your photos — click one to place it in the selected panel"></div>
+      <p class="hint">Two samples are loaded already. Click a panel on the cover, then click a photo to place it there — or drag the photo on the cover to move it.</p>
+    </div>
+
+    <div class="group">
+      <h2>2 · Size</h2>
+      <div class="sizes">
+        <label><input type="radio" name="size" value="portrait" checked> Portrait<br><span>1080 × 1350</span></label>
+        <label><input type="radio" name="size" value="square"> Square<br><span>1080 × 1080</span></label>
+        <label><input type="radio" name="size" value="landscape"> Landscape<br><span>1920 × 1080</span></label>
+      </div>
+    </div>
+
+    <div class="group">
+      <h2>3 · Words</h2>
+      <label>Title <input id="caption" type="text" maxlength="40" value="Sunset Heist"></label>
+      <label>Subtitle <input id="subtitle" type="text" maxlength="40" value="Ocean Drive"></label>
+      <label>Title size
+        <span class="range-row"><input id="titleScale" type="range" min="70" max="130" value="100"><span id="titleScaleVal">100%</span></span>
+      </label>
+    </div>
+
+    <div class="group">
+      <h2>4 · Sunset grade</h2>
+      <label>Warm neon grade
+        <span class="range-row"><input id="grade" type="range" min="0" max="100" value="70"><span id="gradeVal">70%</span></span>
+      </label>
+    </div>
+
+    <div class="group">
+      <h2>5 · Selected panel</h2>
+      <p id="panelLabel" class="panel-label">Panel 1 — Hero</p>
+      <label>Photo <select id="panelPhoto"></select></label>
+      <label>Zoom
+        <span class="range-row"><input id="zoom" type="range" min="100" max="250" value="100"><span id="zoomVal">100%</span></span>
+      </label>
+      <label>Move left / right
+        <span class="range-row"><input id="panX" type="range" min="-50" max="50" value="0"><span>drag</span></span>
+      </label>
+      <label>Move up / down
+        <span class="range-row"><input id="panY" type="range" min="-50" max="50" value="0"><span>drag</span></span>
+      </label>
+      <div class="btn-row">
+        <button id="centerBtn" type="button">Centre</button>
+        <button id="fillAllBtn" type="button">Fill all panels</button>
+        <button id="shuffleBtn" type="button">Shuffle crops</button>
+      </div>
+    </div>
+
+    <button id="export" type="button" class="export">Export PNG</button>
+    <p id="status" role="status"></p>
+  </section>
+
+  <section class="preview" aria-label="Cover preview">
+    <canvas id="cover" width="1080" height="1350" aria-label="The cover"></canvas>
+    <p class="hint">Click a panel to select it. Drag on the cover to move that panel’s photo.</p>
+  </section>
+</main>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
